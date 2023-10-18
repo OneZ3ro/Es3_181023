@@ -3,7 +3,7 @@ package angelomoreno.entities;
 import angelomoreno.entities.enums.Sesso;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -17,14 +17,14 @@ public class Persona {
     private String nome;
     private String cognome;
     private String email;
-    private LocalDate dataDiNascita;
+    private Date dataDiNascita;
     private Sesso sesso;
     @OneToMany (mappedBy = "persona")
     private List<Partecipazione> partecipazioni;
 
     public Persona(){};
 
-    public Persona(String nome, String cognome, String email, LocalDate dataDiNascita, Sesso sesso) {
+    public Persona(String nome, String cognome, String email, Date dataDiNascita, Sesso sesso) {
         this.nome = nome;
         this.cognome = cognome;
         this.email = email;
@@ -56,11 +56,11 @@ public class Persona {
         this.email = email;
     }
 
-    public LocalDate getDataDiNascita() {
+    public Date getDataDiNascita() {
         return dataDiNascita;
     }
 
-    public void setDataDiNascita(LocalDate dataDiNascita) {
+    public void setDataDiNascita(Date dataDiNascita) {
         this.dataDiNascita = dataDiNascita;
     }
 
