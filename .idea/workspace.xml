@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e587784a-5b85-487e-9e11-714b1e83c8f2" name="Changes" comment="" />
+    <list default="true" id="e587784a-5b85-487e-9e11-714b1e83c8f2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/angelomoreno/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/angelomoreno/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/angelomoreno/entities/Evento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/angelomoreno/entities/Evento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/angelomoreno/entities/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/angelomoreno/entities/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/angelomoreno/entities/Partecipazione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/angelomoreno/entities/Partecipazione.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/angelomoreno/entities/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/angelomoreno/entities/Persona.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

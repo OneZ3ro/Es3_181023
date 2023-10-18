@@ -12,7 +12,7 @@ import java.util.UUID;
 public class Evento {
     @Id
     @GeneratedValue
-    private UUID evento_id;
+    private long evento_id;
     private String titolo;
     private LocalDate dataEvento;
     private String descrizione;
@@ -37,7 +37,7 @@ public class Evento {
         this.location = location;
     }
 
-    public UUID getEvento_id() {
+    public long getEvento_id() {
         return evento_id;
     }
 

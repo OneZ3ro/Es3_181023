@@ -12,7 +12,7 @@ import java.util.UUID;
 public class Persona {
     @Id
     @GeneratedValue
-    private UUID persona_id;
+    private long persona_id;
 
     private String nome;
     private String cognome;
@@ -73,7 +73,7 @@ public class Persona {
         this.sesso = sesso;
     }
 
-    public UUID getPersona_id() {
+    public long getPersona_id() {
         return persona_id;
     }
 

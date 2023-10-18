@@ -8,7 +8,7 @@ import java.util.UUID;
 public class Location {
     @Id
     @GeneratedValue
-    private UUID location_id;
+    private long location_id;
     private String nome;
     private String city;
     @OneToMany (mappedBy = "location")
@@ -37,7 +37,7 @@ public class Location {
         this.city = city;
     }
 
-    public UUID getLocation_id() {
+    public long getLocation_id() {
         return location_id;
     }
 

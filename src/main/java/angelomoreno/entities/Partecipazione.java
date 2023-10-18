@@ -10,7 +10,7 @@ import java.util.UUID;
 public class Partecipazione {
     @Id
     @GeneratedValue
-    private UUID partecipazione_id;
+    private long partecipazione_id;
     @ManyToOne
     @JoinColumn(name = "persona_id", nullable = false)
     private Persona persona;
@@ -28,7 +28,7 @@ public class Partecipazione {
         this.stato = stato;
     }
 
-    public UUID getPartecipazione_id() {
+    public long getPartecipazione_id() {
         return partecipazione_id;
     }
 
