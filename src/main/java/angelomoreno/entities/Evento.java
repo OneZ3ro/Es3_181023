@@ -9,6 +9,7 @@ import java.util.Set;
 import java.util.UUID;
 
 @Entity
+@Table(name = "eventi")
 public class Evento {
     @Id
     @GeneratedValue
@@ -98,8 +99,8 @@ public class Evento {
                 ", descrizione='" + descrizione + '\'' +
                 ", tipoEvento=" + tipoEvento +
                 ", numeroMassimoPartecipanti=" + numeroMassimoPartecipanti +
-                ", location=" + location +
-                ", partecipazione=" + partecipazione +
+//                ", location=" + location +
+//                ", partecipazione=" + partecipazione +
                 '}';
     }
 }
