@@ -18,6 +18,7 @@ public class Persona {
     private String cognome;
     private String email;
     private Date dataDiNascita;
+    @Enumerated(EnumType.STRING)
     private Sesso sesso;
     @OneToMany (mappedBy = "persona")
     private List<Partecipazione> partecipazioni;

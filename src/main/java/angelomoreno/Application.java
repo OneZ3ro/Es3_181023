@@ -6,8 +6,10 @@ import angelomoreno.entities.DAO.PartecipazioneDAO;
 import angelomoreno.entities.DAO.PersonaDAO;
 import angelomoreno.entities.Evento;
 import angelomoreno.entities.Location;
+import angelomoreno.entities.Partecipazione;
 import angelomoreno.entities.Persona;
 import angelomoreno.entities.enums.Sesso;
+import angelomoreno.entities.enums.Stato;
 import angelomoreno.entities.enums.TipoEvento;
 import com.github.javafaker.Faker;
 
@@ -39,6 +41,17 @@ public class Application {
             Evento evento3 = new Evento("Comicon", LocalDate.now(), "Fiera fumetti", TipoEvento.PUBBLICO, 10000, loc3);
 
             Persona persona1 = new Persona(faker.funnyName().name(), faker.funnyName().name(), "prova1@gmail.com", faker.date().birthday(), Sesso.M);
+            Persona persona2 = new Persona(faker.funnyName().name(), faker.funnyName().name(), "prova1@gmail.com", faker.date().birthday(), Sesso.F);
+            Persona persona3 = new Persona(faker.funnyName().name(), faker.funnyName().name(), "prova1@gmail.com", faker.date().birthday(), Sesso.M);
+            Persona persona4 = new Persona(faker.funnyName().name(), faker.funnyName().name(), "prova1@gmail.com", faker.date().birthday(), Sesso.F);
+            Persona persona5 = new Persona(faker.funnyName().name(), faker.funnyName().name(), "prova1@gmail.com", faker.date().birthday(), Sesso.M);
+
+            Partecipazione partecipazione1 = new Partecipazione(persona1, evento1, Stato.DA_CONFERMARE);
+            Partecipazione partecipazione2 = new Partecipazione(persona2, evento1, Stato.DA_CONFERMARE);
+            Partecipazione partecipazione3 = new Partecipazione(persona3, evento2, Stato.DA_CONFERMARE);
+            Partecipazione partecipazione4 = new Partecipazione(persona4, evento3, Stato.CONFERMATA);
+            Partecipazione partecipazione5 = new Partecipazione(persona5, evento3, Stato.CONFERMATA);
+
 
         } catch (Exception ex) {
             System.err.println(ex.getMessage());
