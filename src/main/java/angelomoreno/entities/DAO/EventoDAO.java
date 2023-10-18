@@ -1,4 +1,6 @@
-package angelomoreno.entities;
+package angelomoreno.entities.DAO;
+
+import angelomoreno.entities.Evento;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;

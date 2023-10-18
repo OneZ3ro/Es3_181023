@@ -1,8 +1,7 @@
 package angelomoreno.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -12,6 +11,8 @@ public class Location {
     private UUID location_id;
     private String nome;
     private String city;
+    @OneToMany (mappedBy = "location")
+    private List<Evento> eventi;
 
     public Location(){};
 
@@ -40,12 +41,17 @@ public class Location {
         return location_id;
     }
 
+    public List<Evento> getEventi() {
+        return eventi;
+    }
+
     @Override
     public String toString() {
         return "Location{" +
                 "location_id=" + location_id +
                 ", nome='" + nome + '\'' +
                 ", city='" + city + '\'' +
+                ", eventi=" + eventi +
                 '}';
     }
 }

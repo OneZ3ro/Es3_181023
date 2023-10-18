@@ -2,9 +2,8 @@ package angelomoreno.entities;
 
 import angelomoreno.entities.enums.Stato;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -12,9 +11,14 @@ public class Partecipazione {
     @Id
     @GeneratedValue
     private UUID partecipazione_id;
-
+    @ManyToOne
+    @JoinColumn(name = "persona_id", nullable = false)
     private Persona persona;
+
+    @ManyToOne
+    @JoinColumn(name = "evento_id", nullable = false)
     private Evento evento;
+
     private Stato stato;
 
     public Partecipazione(){};

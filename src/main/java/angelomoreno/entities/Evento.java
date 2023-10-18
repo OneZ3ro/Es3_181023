@@ -4,31 +4,41 @@ import angelomoreno.entities.enums.TipoEvento;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
+import java.util.Set;
+import java.util.UUID;
 
 @Entity
 public class Evento {
     @Id
     @GeneratedValue
-    private long id;
+    private UUID evento_id;
     private String titolo;
     private LocalDate dataEvento;
     private String descrizione;
     @Enumerated(EnumType.STRING)
     private TipoEvento tipoEvento;
     private int numeroMassimoPartecipanti;
+    @ManyToOne
+    @JoinColumn(name = "location_id", nullable = false)
+    private Location location;
+
+    @OneToMany (mappedBy = "evento")
+    private Set<Partecipazione> partecipazione;
 
     public Evento(){};
 
-    public Evento(String titolo, LocalDate dataEvento, String descrizione, TipoEvento tipoEvento, int numeroMassimoPartecipanti) {
+    public Evento(String titolo, LocalDate dataEvento, String descrizione, TipoEvento tipoEvento, int numeroMassimoPartecipanti, Location location) {
         this.titolo = titolo;
         this.dataEvento = dataEvento;
         this.descrizione = descrizione;
         this.tipoEvento = tipoEvento;
         this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
+        this.location = location;
     }
 
-    public long getId() {
-        return id;
+    public UUID getEvento_id() {
+        return evento_id;
     }
 
     public String getTitolo() {
@@ -71,15 +81,25 @@ public class Evento {
         this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
     }
 
+    public Set<Partecipazione> getPartecipazione() {
+        return partecipazione;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
     @Override
     public String toString() {
         return "Evento{" +
-                "id=" + id +
+                "evento_id=" + evento_id +
                 ", titolo='" + titolo + '\'' +
                 ", dataEvento=" + dataEvento +
                 ", descrizione='" + descrizione + '\'' +
                 ", tipoEvento=" + tipoEvento +
                 ", numeroMassimoPartecipanti=" + numeroMassimoPartecipanti +
+                ", location=" + location +
+                ", partecipazione=" + partecipazione +
                 '}';
     }
 }
